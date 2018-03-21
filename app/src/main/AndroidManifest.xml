@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="grafico.cursoandroid.com.simulador7">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".tabela1do5" />
+        <activity android:name=".tabela1do6" />
+        <activity android:name=".tabela1do8" />
+        <activity android:name=".tabela1do9" />
+        <activity android:name=".tabela2do5" />
+        <activity android:name=".tabela2do6" />
+        <activity android:name=".dados5" />
+        <activity android:name=".dados6" />
+        <activity android:name=".dados7" />
+        <activity android:name=".graficodo4" />
+        <activity android:name=".grafico1do5" />
+        <activity android:name=".grafico2do5" />
+        <activity android:name=".grafico2do6" />
+        <activity android:name=".dados4" />
+        <activity android:name=".grafico1do6" />
+        <activity android:name=".grafico1do8" />
+        <activity android:name=".grafico1do9" />
+        <activity android:name=".sim4" />
+        <activity android:name=".sim5" />
+        <activity android:name=".sim6" />
+        <activity android:name=".sim7" />
+        <activity android:name=".sim8" />
+        <activity android:name=".sim9" />
+        <activity android:name=".SDAuxiliaryActivity" />
+        <activity android:name=".listaelementos" />
+        <activity android:name=".AuxiliaryActivity" />
+        <activity android:name=".finiteActivity" />
+        <activity android:name=".InfiniteActivity" />
+        <activity android:name=".informationActivity" />
+        <activity android:name=".rateActivity"></activity>
+    </application>
+
+</manifest>
