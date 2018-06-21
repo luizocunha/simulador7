@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("x", i);
                 intent.putExtra("file", list[i]);
                 startActivity(intent);
+
             }
         });
 

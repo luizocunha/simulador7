@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -42,6 +43,9 @@ public class Main2Activity extends AppCompatActivity {
     List<String> nomeElemento = new ArrayList<>();
     List<SystemDynamicsItem> elementos = new ArrayList<>();
     List<ItemDeListaDeElementosDS> listaElementos = new ArrayList<>();
+    public static FiniteStock estoqueSelecionado;
+    public static Variable variavelSelecionada;
+    public static Rate rateSelecionada;
 
     @Override
    protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +54,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         Bundle extra = getIntent().getExtras();
-        File file2 = (File) extra.get("file");
+       final File file2 = (File) extra.get("file");
 
         try {
 
@@ -159,9 +163,10 @@ public class Main2Activity extends AppCompatActivity {
 
                         Intent iAux = new Intent(Main2Activity.this, AuxiliaryActivity.class);
                         Variable variable = (Variable) chaveselementos.get(i);
-                        iAux.putExtra("name", variable.getName());
-                        iAux.putExtra("value", variable.getValue());
-                        iAux.putExtra("exp", variable.getExpression().toString());
+                        variavelSelecionada = variable;
+                      //  iAux.putExtra("name", variable.getName());
+                      //  iAux.putExtra("value", variable.getValue());
+                       // iAux.putExtra("exp", variable.getExpression().toString());
                         startActivity(iAux);
 
                     }
@@ -171,8 +176,7 @@ public class Main2Activity extends AppCompatActivity {
 
                         Intent iAux = new Intent(Main2Activity.this, finiteActivity.class);
                         FiniteStock finite = (FiniteStock) chaveselementos.get(i);
-                        iAux.putExtra("name", finite.getName());
-                        iAux.putExtra("value", finite.getInitialValue().toString());
+                        estoqueSelecionado = finite;
                         startActivity(iAux);
 
                     }
@@ -200,9 +204,10 @@ public class Main2Activity extends AppCompatActivity {
 
                         Intent iAux = new Intent(Main2Activity.this, rateActivity.class);
                         Rate rate = (Rate) chaveselementos.get(i);
-                        iAux.putExtra("name", rate.getName());
-                        iAux.putExtra("exp", rate.getValue());
-                        iAux.putExtra("value", rate.getExpression().toString());
+                        rateSelecionada = rate;
+                       // iAux.putExtra("name", rate.getName());
+                        //iAux.putExtra("exp", rate.getValue());
+                       // iAux.putExtra("value", rate.getExpression().toString());
                         startActivity(iAux);
 
                     }

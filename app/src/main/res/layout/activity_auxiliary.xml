@@ -21,22 +21,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Expressão"
-        android:id="@+id/textView2"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/finitenome"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Valor"
         android:id="@+id/textView3"
-        android:layout_marginTop="79dp"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/finitenome"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -55,14 +45,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/auxiex"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp" />
+        android:text="Salvar"
+        android:id="@+id/salvarauxi"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="97dp" />
 
 </RelativeLayout>
